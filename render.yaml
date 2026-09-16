@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: research-assistant
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-safeguard-20b
+      - key: GROQ_MAX_TOKENS
+        value: "1400"
+      - key: GROQ_MIN_REQUEST_INTERVAL
+        value: "0.5"
+      - key: TAVILY_SEARCH_DEPTH
+        value: basic
+      - key: MAX_REVISIONS
+        value: "1"
+      - key: APP_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: AUTO_OPEN_BROWSER
+        value: "false"

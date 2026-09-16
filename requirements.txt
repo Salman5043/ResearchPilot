@@ -1,0 +1,10 @@
+langgraph
+langchain
+langchain-groq
+langchain-community
+tavily-python
+python-dotenv
+pydantic
+langchain_huggingface
+fastapi
+uvicorn
