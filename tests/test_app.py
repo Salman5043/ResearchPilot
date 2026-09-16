@@ -17,11 +17,11 @@ class AppTests(unittest.TestCase):
         self.assertEqual(body["service"], "AI Research Assistant")
 
     def test_frontend_is_served(self):
-    response = self.client.get("/")
-
-    self.assertEqual(response.status_code, 200)
-    self.assertIn("text/html", response.headers.get("content-type", ""))
-    self.assertIn("<title>ResearchPilot</title>", response.text)
+        response = self.client.get("/")
+    
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("text/html", response.headers.get("content-type", ""))
+        self.assertIn("<title>ResearchPilot</title>", response.text)
 
 
 if __name__ == "__main__":
